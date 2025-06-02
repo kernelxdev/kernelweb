@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-    background-image: url('/assets/Background.jpg');
+    background-image: url('./assets/Background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,6 +23,7 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -42,6 +43,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     margin: 1rem;
+    margin-bottom: 0;
 }
 
 .profile-pic {
@@ -75,17 +77,6 @@ body {
     opacity: 0.8;
 }
 
-@media (max-width: 480px) {
-    .profile-card {
-        padding: 1.5rem 1rem;
-    }
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 1rem;
-    }
-}
-
 .social-links {
     display: flex;
     gap: 1.5rem;
@@ -114,20 +105,6 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.profile-card {
-    margin-bottom: 0;
 }
 
 @media (max-width: 600px) {
