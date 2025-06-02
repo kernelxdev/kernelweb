@@ -1,41 +1,143 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
 body {
-    color: white;
-    font-family:Arial, Helvetica, sans-serif;
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("assets/Background.jpg");
+    background-image: url('assets/Background.jpg');
     background-size: cover;
-    background-repeat: inherit;
-}
-
-
-
-#pfp {
-    border-radius: 10%;
-    width: 200px;
-    height: 200px;
-}
-
-.profile {
-    margin: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
 }
 
-.description {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.player {
-    
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    max-width: 90%;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin: 1rem;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.name {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.title {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.slogan {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    margin-bottom: 0;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 1.5rem 1rem;
+    }
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+.social-ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.social-ball:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.profile-card {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .social-ball {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+    .social-links {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
 }
